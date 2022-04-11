@@ -1,12 +1,11 @@
 import 'i_string_validator.dart';
-import 'i_validator.dart';
 
 // #############################################################################
-// #  Ver: 1.0 - last: 12/01/22
+// #  Ver: 1.0 - last: 11/04/22
 // #  Nullsafety
 // #  Validator of Strings
 // #############################################################################
-class StringValidator implements IValidator<String>, IStringValidator {
+class StringValidator implements IStringValidator {
   //
   StringValidator();
 

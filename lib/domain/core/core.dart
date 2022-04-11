@@ -1,12 +1,11 @@
 /// Support for doing something awesome.
 ///
 /// More dartdocs go here.
-library domain;
+library core;
 
-export 'entities/artist.dart';
-export 'vvos/vo_unique_id.dart';
-export 'vvos/vo_name_exemple.dart';
-export 'core/core.dart';
+export 'entity/entity.dart';
+export 'vvo/validated_value_object.dart';
+
 
 
 

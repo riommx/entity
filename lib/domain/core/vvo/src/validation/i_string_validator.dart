@@ -1,5 +1,5 @@
 // #############################################################################
-// #  Ver: 1.0 - last: 12/01/22
+// #  Ver: 1.0 - last: 11/04/22
 // #  Nullsafety
 // #  Interface to validate a String
 // #############################################################################
@@ -24,6 +24,11 @@ abstract class IStringValidator {
   bool regex({
     required String value,
     required RegExp reg,
+  });
+  //
+  bool otherValidation({
+    required String value,
+    required bool Function(String value) fun,
   });
 }
 // ******************************************************************

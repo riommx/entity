@@ -1,21 +1,25 @@
 import 'package:dartz/dartz.dart';
+//
+import 'value_object.dart';
+import 'validation/constrains_enums.dart';
+import 'validation/string_vo_validator.dart';
+import 'failures/value_failure.dart';
 
-import 'package:muzeek/domain/core/vvo/validated_value_object.dart';
+//import '../validated_value_object.dart';
 
 //
 // #############################################################################
-// #  Ver: 1.0 - last: 12/01/22
+// #  Ver: 1.0 - last: 11/04/22
 // #  Nullsafety
 // #  Exemple of how to create a String Validated Value Object
 // #############################################################################
-class VoNameExemple extends ValueObject<String> {
+class VVOExemple extends ValueObject<String> {
   //
   // ===========================================================================
-  VoNameExemple._(Either<List<ValueFailure<String>>, String> value)
-      : super(value);
+  VVOExemple._(Either<List<ValueFailure<String>>, String> value) : super(value);
   //
   // ===========================================================================
-  factory VoNameExemple({required String value}) {
+  factory VVOExemple({required String value}) {
     //
     final constrains = {
       StringConstrains.maxLength: 4,
@@ -31,9 +35,9 @@ class VoNameExemple extends ValueObject<String> {
     //
     var failures = validator.validate(value: value);
     //
-    if (failures.isEmpty) return VoNameExemple._(right(value));
+    if (failures.isEmpty) return VVOExemple._(right(value));
     //
-    return VoNameExemple._(left(failures));
+    return VVOExemple._(left(failures));
   }
 }
 // ******************************************************************

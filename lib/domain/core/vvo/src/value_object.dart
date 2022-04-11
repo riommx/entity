@@ -4,15 +4,15 @@ import 'package:equatable/equatable.dart';
 //
 import 'failures/value_error.dart';
 import 'failures/value_failure.dart';
-import 'validation/i_validatable.dart';
+import 'validation/i_is_valid.dart';
 
 // #############################################################################
-// #  Ver: 1.0 - last: 12/01/22
+// #  Ver: 1.0 - last: 11/04/22
 // #  Nullsafety
 // #  Base Class for Validated Value Objects
 // #############################################################################
 @immutable
-abstract class ValueObject<T> extends Equatable implements IValidatable {
+abstract class ValueObject<T> extends Equatable implements IIsValid {
   //
   // ===========================================================================
   final Either<List<ValueFailure<T>>, T> _value;

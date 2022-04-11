@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 // #############################################################################
-// #  Ver: 1.0 - last: 12/01/22
+// #  Ver: 1.0 - last: 11/04/22
 // #  Nullsafety
 // #  Freezed Union of Value Failures
 // #############################################################################
@@ -13,12 +13,13 @@ part 'value_failure.freezed.dart';
 abstract class ValueFailure<T> with _$ValueFailure<T> {
   //
   // VALIDATOR --------------------------
+  //
   const factory ValueFailure.notPassTheValidation({
     required T failedValue,
     required Type type,
     required String message,
   }) = NotPassTheValidation<T>;
-
+  //
   // VALIDATOR STRING -------------------
   //
   const factory ValueFailure.notSingleLine({
@@ -35,7 +36,6 @@ abstract class ValueFailure<T> with _$ValueFailure<T> {
     required Type type,
   }) = InvalidRegex<T>;
   //
-
   // VALIDATOR STRING & KTLIST -------------------
   //
   const factory ValueFailure.empty({
@@ -53,8 +53,8 @@ abstract class ValueFailure<T> with _$ValueFailure<T> {
     required int length,
     required int maxLength,
   }) = ExceedingLength<T>;
-
-  // VALIDATOR NUM =======================
+  //
+  // VALIDATOR NUM -------------------
   //
   const factory ValueFailure.overMaxValue({
     required T failedValue,
@@ -65,11 +65,6 @@ abstract class ValueFailure<T> with _$ValueFailure<T> {
     required T failedValue,
     required String min,
   }) = BellowMinValue<T>;
-
-  const factory ValueFailure.testando({
-    required T failedValue,
-    required String min,
-  }) = Testando<T>;
 }
 // ******************************************************************
 // *    _____   _   _____      _______   ______    _____   _    _

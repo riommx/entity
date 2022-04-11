@@ -1,9 +1,9 @@
 import 'value_failure.dart';
 
 // #############################################################################
-// #  Ver: 1.0 - last: 12/01/22
+// #  Ver: 1.0 - last: 11/04/22
 // #  Nullsafety
-// #  Exeption for Value
+// #  Exeption for Value Error
 // #############################################################################
 //
 class ValueError extends Error {

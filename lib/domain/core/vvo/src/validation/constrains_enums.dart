@@ -1,13 +1,25 @@
 // #############################################################################
-// #  Ver: 1.0 - last: 12/01/22
-// #  Interface for a all types validator
+// #  Ver: 1.0 - last: 11/04/22
+// #  Nullsafety
+// #  Enums to list the different constrains
 // #############################################################################
-abstract class IValidator<T> {
-  bool otherValidation({
-    required T value,
-    required bool Function(T value) fun,
-  });
+
+enum StringConstrains {
+  notEmpty,
+
+  singleLine,
+
+  dateTime,
+
+  minLength,
+
+  maxLength,
+
+  regex,
+
+  otherValidation,
 }
+
 // ******************************************************************
 // *    _____   _   _____      _______   ______    _____   _    _
 // *   / ____| | | |  __ \    |__   __| |  ____|  / ____| | |  | |

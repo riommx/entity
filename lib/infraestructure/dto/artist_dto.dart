@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:muzeek/domain/domain.dart';
 //
+import 'package:muzeek/domain/domain.dart';
 
 // #############################################################################
 // #  Ver: 1.0 - last: 12/01/22
