@@ -62,6 +62,10 @@ class StringVOValidator {
           }
           break;
         //
+          
+          
+          
+          
         case StringConstrains.minLength:
           if (!_validator.minLength(value: value, min: v)) {
             failures.add(ValueFailure.shortLength(
